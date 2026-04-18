@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048: Particle Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title-container">
+                <h1>2048</h1>
+                <p class="subtitle">Merge tiles to reach 2048</p>
+            </div>
+            <div class="scores-container">
+                <div class="score-box">
+                    <span class="score-label">SCORE</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-box">
+                    <span class="score-label">BEST</span>
+                    <span id="best-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <button id="undo-btn" class="btn">Undo Move</button>
+            <button id="restart-btn" class="btn">New Game</button>
+        </div>
+
+        <div class="game-container">
+            <div class="grid-background" id="grid-background">
+                </div>
+            <div class="tile-container" id="tile-container">
+                </div>
+            <canvas id="particle-canvas"></canvas>
+            
+            <div id="game-over" class="overlay hidden">
+                <h2>Game Over!</h2>
+                <button id="try-again-btn" class="btn primary">Try Again</button>
+            </div>
+            <div id="game-won" class="overlay hidden">
+                <h2>You Win!</h2>
+                <button id="keep-going-btn" class="btn">Keep Going</button>
+                <button id="play-again-btn" class="btn primary">Play Again</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <p><strong>How to play:</strong> Use your arrow keys, WASD, or swipe to move the tiles. Tiles with the same number merge into one when they touch. Add them up to reach 2048!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
